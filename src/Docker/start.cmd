@@ -1,0 +1,1 @@
+docker-compose -p hrdepartment up -d

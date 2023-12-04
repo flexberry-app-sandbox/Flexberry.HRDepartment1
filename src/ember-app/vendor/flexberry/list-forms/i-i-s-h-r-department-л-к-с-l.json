@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-h-r-department-л-к-с-e",
+  "editForm": "i-i-s-h-r-department-л-к-с-e",
+  "external": false,
+  "caption": "ЛКС",
+  "name": "IISHRDepartmentЛКСL",
+  "className": "ЛКСL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-h-r-department-л-к-с",
+      "modelProjection": "ЛКСL"
+    }
+  ]
+}

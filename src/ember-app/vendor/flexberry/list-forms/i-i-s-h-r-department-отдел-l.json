@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-h-r-department-отдел-e",
+  "editForm": "i-i-s-h-r-department-отдел-e",
+  "external": false,
+  "caption": "Отдел",
+  "name": "IISHRDepartmentОтделL",
+  "className": "ОтделL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-h-r-department-отдел",
+      "modelProjection": "ОтделL"
+    }
+  ]
+}

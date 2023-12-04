@@ -1,0 +1,51 @@
+﻿{
+  "applicationCaption": "H r department",
+  "applicationTitle": "H r department",
+  "items": [
+    {
+      "link": null,
+      "menuName": "отдел-кадров",
+      "caption": "Отдел кадров",
+      "title": "Отдел кадров",
+      "children": [
+        {
+          "link": "i-i-s-h-r-department-отдел-l",
+          "menuName": null,
+          "caption": "Отдел",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-h-r-department-л-к-с-l",
+          "menuName": null,
+          "caption": "ЛКС",
+          "title": "",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "справочники",
+      "caption": "Справочники",
+      "title": "Справочники",
+      "children": [
+        {
+          "link": "i-i-s-h-r-department-отдел-l",
+          "menuName": null,
+          "caption": "ОтделL",
+          "title": "Отдел",
+          "children": null
+        },
+        {
+          "link": "i-i-s-h-r-department-л-к-с-l",
+          "menuName": null,
+          "caption": "ЛКСL",
+          "title": "ЛКС",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}
