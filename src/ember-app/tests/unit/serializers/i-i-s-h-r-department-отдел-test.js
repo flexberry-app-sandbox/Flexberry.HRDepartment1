@@ -9,8 +9,12 @@ moduleForModel('i-i-s-h-r-department-отдел', 'Unit | Serializer | i-i-s-h-r
     'transform:decimal',
     'transform:guid',
 
+    'model:i-i-s-h-r-department-анкета',
+    'model:i-i-s-h-r-department-должность',
     'model:i-i-s-h-r-department-л-к-с',
     'model:i-i-s-h-r-department-отдел',
+    'model:i-i-s-h-r-department-отчет',
+    'model:i-i-s-h-r-department-т-ч-отчета',
     'validator:ds-error',
     'validator:presence',
     'validator:number',

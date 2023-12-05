@@ -1,0 +1,39 @@
+﻿{
+  "name": "IISHRDepartmentТЧ_отчета",
+  "modelName": "i-i-s-h-r-department-т-ч-отчета",
+  "className": "ТЧ_отчета",
+  "nameSpace": "IIS.HRDepartment",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "результат",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": true,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "лКС",
+      "relatedTo": "i-i-s-h-r-department-л-к-с",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "отчет",
+      "relatedTo": "i-i-s-h-r-department-отчет",
+      "inverse": "тЧ_отчета"
+    }
+  ],
+  "projections": [],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

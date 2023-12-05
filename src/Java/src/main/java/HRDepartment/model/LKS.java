@@ -32,9 +32,6 @@ public class LKS {
     @Column(name = "Контакты")
     private String контакты;
 
-    @Column(name = "Должность")
-    private String должность;
-
     @Column(name = "Дата_приема")
     private Date дата_приема;
 
@@ -47,6 +44,16 @@ public class LKS {
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "Otdel", insertable = false, updatable = false)
     private Otdel otdel;
+
+    @EdmIgnore
+    @Converter(converterClass = UUIDConverter.class, name = "Dolzhnost")
+    @Convert("Dolzhnost")
+    @Column(name = "Должность", length = 16, unique = true, nullable = false)
+    private UUID _dolzhnostid;
+
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @JoinColumn(name = "Dolzhnost", insertable = false, updatable = false)
+    private Dolzhnost dolzhnost;
 
 
     public LKS() {
@@ -83,14 +90,6 @@ public class LKS {
 
     public void setКонтакты(String контакты) {
       this.контакты = контакты;
-    }
-
-    public String getДолжность() {
-      return должность;
-    }
-
-    public void setДолжность(String должность) {
-      this.должность = должность;
     }
 
     public Date getДата_приема() {

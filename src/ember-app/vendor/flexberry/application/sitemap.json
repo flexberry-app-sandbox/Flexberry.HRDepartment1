@@ -21,15 +21,7 @@
           "caption": "ЛКС",
           "title": "",
           "children": null
-        }
-      ]
-    },
-    {
-      "link": null,
-      "menuName": "справочники",
-      "caption": "Справочники",
-      "title": "Справочники",
-      "children": [
+        },
         {
           "link": "i-i-s-h-r-department-отдел-l",
           "menuName": null,

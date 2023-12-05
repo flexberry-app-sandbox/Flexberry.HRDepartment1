@@ -22,30 +22,24 @@ export default Controller.extend({
             link: 'i-i-s-h-r-department-отдел-l',
             caption: i18n.t('forms.application.sitemap.отдел-кадров.i-i-s-h-r-department-отдел-l.caption'),
             title: i18n.t('forms.application.sitemap.отдел-кадров.i-i-s-h-r-department-отдел-l.title'),
-            icon: 'chart line',
+            icon: 'phone',
             children: null
           }, {
             link: 'i-i-s-h-r-department-л-к-с-l',
             caption: i18n.t('forms.application.sitemap.отдел-кадров.i-i-s-h-r-department-л-к-с-l.caption'),
             title: i18n.t('forms.application.sitemap.отдел-кадров.i-i-s-h-r-department-л-к-с-l.title'),
-            icon: 'chart line',
+            icon: 'suitcase',
             children: null
-          }]
-        }, {
-          link: null,
-          icon: 'list',
-          caption: i18n.t('forms.application.sitemap.справочники.caption'),
-          title: i18n.t('forms.application.sitemap.справочники.title'),
-          children: [{
+          }, {
             link: 'i-i-s-h-r-department-отдел-l',
-            caption: i18n.t('forms.application.sitemap.справочники.i-i-s-h-r-department-отдел-l.caption'),
-            title: i18n.t('forms.application.sitemap.справочники.i-i-s-h-r-department-отдел-l.title'),
-            icon: 'chart line',
+            caption: i18n.t('forms.application.sitemap.отдел-кадров.i-i-s-h-r-department-отдел-l.caption'),
+            title: i18n.t('forms.application.sitemap.отдел-кадров.i-i-s-h-r-department-отдел-l.title'),
+            icon: 'address card',
             children: null
           }, {
             link: 'i-i-s-h-r-department-л-к-с-l',
-            caption: i18n.t('forms.application.sitemap.справочники.i-i-s-h-r-department-л-к-с-l.caption'),
-            title: i18n.t('forms.application.sitemap.справочники.i-i-s-h-r-department-л-к-с-l.title'),
+            caption: i18n.t('forms.application.sitemap.отдел-кадров.i-i-s-h-r-department-л-к-с-l.caption'),
+            title: i18n.t('forms.application.sitemap.отдел-кадров.i-i-s-h-r-department-л-к-с-l.title'),
             icon: 'file',
             children: null
           }]

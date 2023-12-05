@@ -13,6 +13,19 @@ CREATE TABLE [Отдел] (
 	 PRIMARY KEY ([primaryKey]))
 
 
+CREATE TABLE [Должность] (
+
+	 [primaryKey] UNIQUEIDENTIFIER  NOT NULL,
+
+	 [ID] INT  NOT NULL,
+
+	 [Название] VARCHAR(255)  NOT NULL,
+
+	 [Оклад] VARCHAR(255)  NULL,
+
+	 PRIMARY KEY ([primaryKey]))
+
+
 CREATE TABLE [ЛКС] (
 
 	 [primaryKey] UNIQUEIDENTIFIER  NOT NULL,
@@ -21,13 +34,58 @@ CREATE TABLE [ЛКС] (
 
 	 [Дата_приема] DATETIME  NOT NULL,
 
-	 [Должность] VARCHAR(255)  NOT NULL,
-
 	 [Контакты] VARCHAR(255)  NULL,
 
 	 [ФИО] VARCHAR(255)  NOT NULL,
 
+	 [Должность] UNIQUEIDENTIFIER  NOT NULL,
+
 	 [Отдел] UNIQUEIDENTIFIER  NOT NULL,
+
+	 PRIMARY KEY ([primaryKey]))
+
+
+CREATE TABLE [Анкета] (
+
+	 [primaryKey] UNIQUEIDENTIFIER  NOT NULL,
+
+	 [ID] INT  NOT NULL,
+
+	 [Контакты] VARCHAR(255)  NOT NULL,
+
+	 [ЛК] VARCHAR(255)  NULL,
+
+	 [Образование] VARCHAR(255)  NULL,
+
+	 [Опыт_работы] VARCHAR(255)  NULL,
+
+	 [ФИО] VARCHAR(255)  NOT NULL,
+
+	 [Должность] UNIQUEIDENTIFIER  NOT NULL,
+
+	 PRIMARY KEY ([primaryKey]))
+
+
+CREATE TABLE [ТЧ_отчета] (
+
+	 [primaryKey] UNIQUEIDENTIFIER  NOT NULL,
+
+	 [Результат] VARCHAR(255)  NOT NULL,
+
+	 [ЛКС] UNIQUEIDENTIFIER  NOT NULL,
+
+	 PRIMARY KEY ([primaryKey]))
+
+
+CREATE TABLE [Отчет] (
+
+	 [primaryKey] UNIQUEIDENTIFIER  NOT NULL,
+
+	 [ID] INT  NOT NULL,
+
+	 [Дата_проверки] DATETIME  NOT NULL,
+
+	 [ТЧ_отчета] UNIQUEIDENTIFIER  NOT NULL,
 
 	 PRIMARY KEY ([primaryKey]))
 

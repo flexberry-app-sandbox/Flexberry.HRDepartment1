@@ -54,43 +54,4 @@
     }}
     {{flexberry-validationmessage error=(v-get validationModel "контакты" "message")}}
   </div>
-  <div class="field">
-    {{flexberry-field
-      readonly=readonly
-      value=model.должность
-      class=(if (v-get validationModel "должность" "isInvalid") "error")
-      label=(t "forms.i-i-s-h-r-department-л-к-с-e.должность-caption")
-      data-test-i-i-s-h-r-department-л-к-с-e-должность=true
-    }}
-    {{flexberry-validationmessage error=(v-get validationModel "должность" "message")}}
-  </div>
-  <div class="field">
-    <label>{{t "forms.i-i-s-h-r-department-л-к-с-e.дата_приема-caption"}}</label>
-    {{flexberry-simpledatetime
-      type="date"
-      readonly=readonly
-      value=model.дата_приема
-      class=(if (v-get validationModel "дата_приема" "isInvalid") "error")
-      data-test-i-i-s-h-r-department-л-к-с-e-дата_приема=true
-    }}
-    {{flexberry-validationmessage error=(v-get validationModel "дата_приема" "message")}}
-  </div>
-  <div class="field">
-    <label>{{t "forms.i-i-s-h-r-department-л-к-с-e.отдел-caption"}}</label>
-    {{flexberry-lookup
-      choose="showLookupDialog"
-      remove="removeLookupValue"
-      value=model.отдел
-      displayAttributeName="название"
-      autocomplete=true
-      relationName="отдел"
-      projection="ОтделL"
-      title=(t "forms.i-i-s-h-r-department-л-к-с-e.отдел-caption")
-      readonly=readonly
-      componentName="отделLookup"
-      class=(if (v-get validationModel "отдел" "isInvalid") "error")
-      data-test-i-i-s-h-r-department-л-к-с-e-отдел=true
-    }}
-    {{flexberry-validationmessage error=(v-get validationModel "отдел" "message")}}
-  </div>
 </form>

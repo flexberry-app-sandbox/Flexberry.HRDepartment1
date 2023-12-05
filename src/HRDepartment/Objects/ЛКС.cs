@@ -54,11 +54,11 @@ namespace IIS.HRDepartment
         
         private string fКонтакты;
         
-        private string fДолжность;
-        
         private System.DateTime fДата_приема;
         
         private IIS.HRDepartment.Отдел fОтдел;
+        
+        private IIS.HRDepartment.Должность fДолжность;
         
         // *** Start programmer edit section *** (ЛКС CustomMembers)
 
@@ -130,39 +130,6 @@ namespace IIS.HRDepartment
         }
         
         /// <summary>
-        /// Должность.
-        /// </summary>
-        // *** Start programmer edit section *** (ЛКС.Должность CustomAttributes)
-
-        // *** End programmer edit section *** (ЛКС.Должность CustomAttributes)
-        [StrLen(255)]
-        [NotNull()]
-        public virtual string Должность
-        {
-            get
-            {
-                // *** Start programmer edit section *** (ЛКС.Должность Get start)
-
-                // *** End programmer edit section *** (ЛКС.Должность Get start)
-                string result = this.fДолжность;
-                // *** Start programmer edit section *** (ЛКС.Должность Get end)
-
-                // *** End programmer edit section *** (ЛКС.Должность Get end)
-                return result;
-            }
-            set
-            {
-                // *** Start programmer edit section *** (ЛКС.Должность Set start)
-
-                // *** End programmer edit section *** (ЛКС.Должность Set start)
-                this.fДолжность = value;
-                // *** Start programmer edit section *** (ЛКС.Должность Set end)
-
-                // *** End programmer edit section *** (ЛКС.Должность Set end)
-            }
-        }
-        
-        /// <summary>
         /// Контакты.
         /// </summary>
         // *** Start programmer edit section *** (ЛКС.Контакты CustomAttributes)
@@ -224,6 +191,40 @@ namespace IIS.HRDepartment
                 // *** Start programmer edit section *** (ЛКС.ФИО Set end)
 
                 // *** End programmer edit section *** (ЛКС.ФИО Set end)
+            }
+        }
+        
+        /// <summary>
+        /// ЛКС.
+        /// </summary>
+        // *** Start programmer edit section *** (ЛКС.Должность CustomAttributes)
+
+        // *** End programmer edit section *** (ЛКС.Должность CustomAttributes)
+        [PropertyStorage(new string[] {
+                "Должность"})]
+        [NotNull()]
+        public virtual IIS.HRDepartment.Должность Должность
+        {
+            get
+            {
+                // *** Start programmer edit section *** (ЛКС.Должность Get start)
+
+                // *** End programmer edit section *** (ЛКС.Должность Get start)
+                IIS.HRDepartment.Должность result = this.fДолжность;
+                // *** Start programmer edit section *** (ЛКС.Должность Get end)
+
+                // *** End programmer edit section *** (ЛКС.Должность Get end)
+                return result;
+            }
+            set
+            {
+                // *** Start programmer edit section *** (ЛКС.Должность Set start)
+
+                // *** End programmer edit section *** (ЛКС.Должность Set start)
+                this.fДолжность = value;
+                // *** Start programmer edit section *** (ЛКС.Должность Set end)
+
+                // *** End programmer edit section *** (ЛКС.Должность Set end)
             }
         }
         

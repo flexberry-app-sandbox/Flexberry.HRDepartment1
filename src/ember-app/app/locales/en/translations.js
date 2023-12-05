@@ -5,16 +5,24 @@ import IISHRDepartmentЛКСLForm from './forms/i-i-s-h-r-department-л-к-с-l'
 import IISHRDepartmentОтделLForm from './forms/i-i-s-h-r-department-отдел-l';
 import IISHRDepartmentЛКСEForm from './forms/i-i-s-h-r-department-л-к-с-e';
 import IISHRDepartmentОтделEForm from './forms/i-i-s-h-r-department-отдел-e';
+import IISHRDepartmentАнкетаModel from './models/i-i-s-h-r-department-анкета';
+import IISHRDepartmentДолжностьModel from './models/i-i-s-h-r-department-должность';
 import IISHRDepartmentЛКСModel from './models/i-i-s-h-r-department-л-к-с';
 import IISHRDepartmentОтделModel from './models/i-i-s-h-r-department-отдел';
+import IISHRDepartmentОтчетModel from './models/i-i-s-h-r-department-отчет';
+import IISHRDepartmentТЧ_отчетаModel from './models/i-i-s-h-r-department-т-ч-отчета';
 
 const translations = {};
 $.extend(true, translations, EmberFlexberryTranslations);
 
 $.extend(true, translations, {
   models: {
+    'i-i-s-h-r-department-анкета': IISHRDepartmentАнкетаModel,
+    'i-i-s-h-r-department-должность': IISHRDepartmentДолжностьModel,
     'i-i-s-h-r-department-л-к-с': IISHRDepartmentЛКСModel,
-    'i-i-s-h-r-department-отдел': IISHRDepartmentОтделModel
+    'i-i-s-h-r-department-отдел': IISHRDepartmentОтделModel,
+    'i-i-s-h-r-department-отчет': IISHRDepartmentОтчетModel,
+    'i-i-s-h-r-department-т-ч-отчета': IISHRDepartmentТЧ_отчетаModel
   },
 
   'application-name': 'H r department',

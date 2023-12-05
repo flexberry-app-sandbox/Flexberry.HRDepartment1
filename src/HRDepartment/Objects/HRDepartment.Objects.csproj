@@ -111,6 +111,18 @@
     </Compile>
     <Compile Include="Properties/AssemblyInfo.cs" />
     <None Include="packages.config" />
+    <Compile Include="Должность.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Анкета.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ТЧ_отчета.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Отчет.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

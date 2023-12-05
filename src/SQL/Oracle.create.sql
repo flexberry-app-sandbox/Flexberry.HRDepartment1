@@ -15,6 +15,21 @@ CREATE TABLE "Отдел"
 ) ;
 
 
+CREATE TABLE "Должность"
+(
+
+	"primaryKey" RAW(16) NOT NULL,
+
+	"ID" NUMBER(10) NOT NULL,
+
+	"Название" NVARCHAR2(255) NOT NULL,
+
+	"Оклад" NVARCHAR2(255) NULL,
+
+	 PRIMARY KEY ("primaryKey")
+) ;
+
+
 CREATE TABLE "ЛКС"
 (
 
@@ -26,11 +41,62 @@ CREATE TABLE "ЛКС"
 
 	"Контакты" NVARCHAR2(255) NULL,
 
-	"Должность" NVARCHAR2(255) NOT NULL,
-
 	"Дата_приема" DATE NOT NULL,
 
 	"Отдел" RAW(16) NOT NULL,
+
+	"Должность" RAW(16) NOT NULL,
+
+	 PRIMARY KEY ("primaryKey")
+) ;
+
+
+CREATE TABLE "Анкета"
+(
+
+	"primaryKey" RAW(16) NOT NULL,
+
+	"ID" NUMBER(10) NOT NULL,
+
+	"ФИО" NVARCHAR2(255) NOT NULL,
+
+	"Контакты" NVARCHAR2(255) NOT NULL,
+
+	"Образование" NVARCHAR2(255) NULL,
+
+	"Опыт_работы" NVARCHAR2(255) NULL,
+
+	"ЛК" NVARCHAR2(255) NULL,
+
+	"Должность" RAW(16) NOT NULL,
+
+	 PRIMARY KEY ("primaryKey")
+) ;
+
+
+CREATE TABLE "ТЧ_отчета"
+(
+
+	"primaryKey" RAW(16) NOT NULL,
+
+	"Результат" NVARCHAR2(255) NOT NULL,
+
+	"ЛКС" RAW(16) NOT NULL,
+
+	 PRIMARY KEY ("primaryKey")
+) ;
+
+
+CREATE TABLE "Отчет"
+(
+
+	"primaryKey" RAW(16) NOT NULL,
+
+	"ID" NUMBER(10) NOT NULL,
+
+	"Дата_проверки" DATE NOT NULL,
+
+	"ТЧ_отчета" RAW(16) NOT NULL,
 
 	 PRIMARY KEY ("primaryKey")
 ) ;
@@ -238,6 +304,26 @@ ALTER TABLE "ЛКС"
 	ADD CONSTRAINT "ЛКС_FОтдел_0" FOREIGN KEY ("Отдел") REFERENCES "Отдел" ("primaryKey");
 
 CREATE INDEX "ЛКС_IОтдел" on "ЛКС" ("Отдел");
+
+ALTER TABLE "ЛКС"
+	ADD CONSTRAINT "ЛКС_FДолжность_0" FOREIGN KEY ("Должность") REFERENCES "Должность" ("primaryKey");
+
+CREATE INDEX "ЛКС_IДолжность" on "ЛКС" ("Должность");
+
+ALTER TABLE "Анкета"
+	ADD CONSTRAINT "Анкета_FДолжн_5941" FOREIGN KEY ("Должность") REFERENCES "Должность" ("primaryKey");
+
+CREATE INDEX "Анкета_IДолжн_6445" on "Анкета" ("Должность");
+
+ALTER TABLE "ТЧ_отчета"
+	ADD CONSTRAINT "ТЧ_отчета_FЛКС_0" FOREIGN KEY ("ЛКС") REFERENCES "ЛКС" ("primaryKey");
+
+CREATE INDEX "ТЧ_отчета_IЛКС" on "ТЧ_отчета" ("ЛКС");
+
+ALTER TABLE "Отчет"
+	ADD CONSTRAINT "Отчет_FТЧ_отче_6161" FOREIGN KEY ("ТЧ_отчета") REFERENCES "ТЧ_отчета" ("primaryKey");
+
+CREATE INDEX "Отчет_IТЧ_отчета" on "Отчет" ("ТЧ_отчета");
 
 ALTER TABLE "STORMWEBSEARCH"
 	ADD CONSTRAINT "STORMWEBSEARCH_FSTORMFILT_6521" FOREIGN KEY ("FilterSetting_m0") REFERENCES "STORMFILTERSETTING" ("primaryKey");
